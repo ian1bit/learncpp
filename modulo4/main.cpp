@@ -1,14 +1,16 @@
 #include <iostream>
 
+void print(double x) { std::cout << x << '\n'; }
+
 int main() {
-  std::cout << "Input a keyboard character: ";
+  print(static_cast<int>(5.5));
 
-  char ch{};
-  std::cin >> ch;
-  std::cout << "You entered\t blabla: " << ch << '\n';
+  char ch{97};
+  std::cout << ch << " has value " << static_cast<int>(ch) << '\n';
 
-  std::cin >> ch;
-  std::cout << "You entered: " << ch << '\n';
+  unsigned int u{259};
+  int s{static_cast<int>(u)};
+  std::cout << s << '\n';
 
   return 0;
 }
